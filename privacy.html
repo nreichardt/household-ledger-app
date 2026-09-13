@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Household Ledger</title>
+<style>
+  :root { color-scheme: light dark; --ink: #1a1a1a; --muted: #5a5a5a; --rule: #e2e2e2; --bg: #fdfdfc; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink: #e8e8e6; --muted: #a0a0a0; --rule: #333; --bg: #161614; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 3rem 1.25rem 5rem; background: var(--bg); color: var(--ink);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 42rem; margin: 0 auto; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .25rem; letter-spacing: -0.02em; }
+  .updated { color: var(--muted); margin: 0 0 2.5rem; font-size: .95rem; }
+  h2 { font-size: 1.15rem; margin: 2.5rem 0 .6rem; letter-spacing: -0.01em; }
+  ul { padding-left: 1.15rem; }
+  li { margin: .4rem 0; }
+  .note { color: var(--muted); font-size: .95rem; }
+  nav { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); font-size: .95rem; }
+  nav a { color: inherit; margin-right: 1.25rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy policy</h1>
+  <p class="updated">Household Ledger &middot; last updated 13 September 2026</p>
+
+  <p>
+    Household Ledger is an application one family runs for itself on a computer
+    in its own home. It has no operator, no server, no customer accounts and no
+    business model. This policy describes what the application does with the
+    information it is given, in plain language, and it is short because the
+    application does very little with it.
+  </p>
+
+  <h2>What information the application handles</h2>
+  <ul>
+    <li>Financial records the household connects or imports: accounts, balances, transactions, loans, bills, pay statements and receipts.</li>
+    <li>Health information the household authorizes: insurance claims and explanations of benefits, and clinical records held by the household's own healthcare providers.</li>
+    <li>Amounts a provider says are owed, and the schedule of any payment plan.</li>
+  </ul>
+  <p>
+    It handles the records of the members of one household only, and only for
+    those members who have authorized it themselves.
+  </p>
+
+  <h2>How that information may be accessed, exchanged or used — and by whom</h2>
+  <p>
+    It is used for exactly one purpose: to show the household its own financial
+    and medical position on its own screens.
+  </p>
+  <ul>
+    <li><strong>It is never sold.</strong> Not now, and there is no future in which it is — there is no company to sell it and no party to sell it to.</li>
+    <li><strong>It is never shared with any third party</strong>, for any purpose, including advertising, analytics, research or marketing.</li>
+    <li><strong>It is never used to train any model.</strong> No opt-in is offered, because none is wanted.</li>
+    <li>It is not disclosed to anyone outside the household except where the law requires it.</li>
+    <li>The only people who can read it are the adults in the household, signing in to the application on their own home network.</li>
+    <li><strong>It is sent back only to where it came from, and only on request.</strong> Today the application only reads. If a future version can send information to a member's own healthcare provider where that provider's API allows it, it will send only what that member chose to send, to that provider alone, after the member has authorized it separately — and this policy will say so before it does.</li>
+  </ul>
+
+  <h2>Express consent, before anything is accessed</h2>
+  <p>
+    The application cannot reach a provider or an insurer on its own. Each
+    member authorizes it directly at their own provider or insurer, using their
+    own login there, and that authorization is what issues the application its
+    access. Nothing is retrieved before that consent is given.
+  </p>
+  <p>
+    Because the information is never shared or sold, there is no separate
+    consent for sharing or selling to give — those things do not happen. If that
+    ever changed, it would require fresh express consent from the member first,
+    and this policy would say so before it happened.
+  </p>
+
+  <h2>Other information on your device</h2>
+  <p>
+    The application accesses <strong>no other information from a member's phone
+    or computer</strong>. It reads no contacts, no location, no photos, no
+    messages, no other applications and no device identifiers. It is a web
+    application the household opens in a browser on its own network.
+  </p>
+  <p class="note">
+    It does read a dedicated email mailbox the household set up for it, which
+    receives only forwarded order confirmations, bill notices and one-time
+    security codes. The household controls what is forwarded into it and can
+    stop that at any time.
+  </p>
+
+  <h2>Where the information is kept, and how it is protected</h2>
+  <ul>
+    <li><strong>Stored in the United States</strong>, on a computer in the household's home. It is not stored in any cloud service operated by anyone else.</li>
+    <li><strong>Encrypted in transit.</strong> All connections use HTTPS, and the application refuses to establish a session over an unencrypted connection.</li>
+    <li><strong>Encrypted at rest.</strong> Credentials and second-factor secrets are individually sealed with AES-256-GCM under a key held outside the database and outside the directory containing it. The database file itself is protected by whole-disk encryption on the machine that holds it.</li>
+    <li><strong>Backups are encrypted</strong> with a passphrase distinct from the application's own key.</li>
+    <li>The application is built following current web application security practice, including the OWASP Top 10, and its developers have reviewed the HL7 FHIR Security and Privacy Module.</li>
+    <li>Every read of health information is recorded in an audit log the household can inspect.</li>
+  </ul>
+
+  <h2>Withdrawing access, and what happens to the data</h2>
+  <p>You can stop the application at any time, in either of two ways, and they do different things:</p>
+  <ul>
+    <li>
+      <strong>Revoke at the source.</strong> Withdraw the application's
+      authorization at your provider's or insurer's own portal. Its access ends
+      immediately and it can retrieve nothing further. It never holds your
+      provider or insurer password, so there is nothing else for it to use.
+    </li>
+    <li>
+      <strong>Disconnect inside the application.</strong> This deletes the stored
+      authorization and stops all further retrieval.
+    </li>
+  </ul>
+  <p>
+    Disconnecting deliberately leaves the records already retrieved in place, so
+    that changing insurer does not silently erase the household's own history.
+    <strong>To dispose of that data as well, delete it in the application</strong>,
+    which purges the records and anything derived from them on a documented
+    schedule, after a short recovery window that exists so an accidental
+    deletion can be undone. The household can also export everything it holds,
+    as JSON or CSV, at any time.
+  </p>
+
+  <h2>Children</h2>
+  <p>
+    Two children's records may be reached, only through a parent's own
+    authorized access as that child's personal representative, and only for as
+    long as the provider permits it. Their records are handled exactly as this
+    policy describes.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    If this policy changes, the updated date above changes with it. A change that
+    widened how information may be used would require fresh consent before it
+    applied to anything already held.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    This application is operated by the household that uses it. Questions about
+    it can be sent to the address on the developer registration held by the
+    provider or insurer through which you authorized it.
+  </p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="terms.html">Terms of service</a>
+  </nav>
+</main>
+</body>
+</html>

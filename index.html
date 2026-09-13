@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Household Ledger</title>
+<style>
+  :root { color-scheme: light dark; --ink: #1a1a1a; --muted: #5a5a5a; --rule: #e2e2e2; --bg: #fdfdfc; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink: #e8e8e6; --muted: #a0a0a0; --rule: #333; --bg: #161614; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 3rem 1.25rem 5rem; background: var(--bg); color: var(--ink);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 42rem; margin: 0 auto; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .25rem; letter-spacing: -0.02em; }
+  .tagline { color: var(--muted); margin: 0 0 2.5rem; font-size: 1.05rem; }
+  h2 { font-size: 1.15rem; margin: 2.5rem 0 .6rem; letter-spacing: -0.01em; }
+  p, li { color: var(--ink); }
+  ul { padding-left: 1.15rem; }
+  li { margin: .35rem 0; }
+  .note { color: var(--muted); font-size: .95rem; }
+  nav { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); font-size: .95rem; }
+  nav a { color: inherit; margin-right: 1.25rem; }
+  footer { margin-top: 2rem; color: var(--muted); font-size: .875rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Household Ledger</h1>
+  <p class="tagline">A private finance and health-record app that one family runs for itself, on its own computer.</p>
+
+  <h2>What it is</h2>
+  <p>
+    Household Ledger gathers one family's own financial records — bank and card
+    accounts, loans, bills, pay statements, receipts — into a single ledger, so
+    the household can see what it owns, what it owes, and where its money goes.
+    It runs on a computer in that family's home. There is no company behind it,
+    no service to sign up for, and no version of it that anybody else uses.
+  </p>
+
+  <h2>Why it connects to health providers and insurers</h2>
+  <p>
+    Medical care is one of the household's larger expenses, and the most
+    difficult to see clearly. A card statement shows a payment to a hospital; it
+    does not show what the payment was for, what the insurer allowed, what is
+    still owed, or that a monthly charge is repaying a balance rather than
+    buying care. Reading a member's own claims and balances — with that member's
+    permission, through the standards-based APIs their insurer and provider
+    publish — is what turns those charges into something a family can plan
+    around.
+  </p>
+  <p>
+    The app asks only for the records of the people in the household, and only
+    after each of them authorizes it at their own provider or insurer.
+  </p>
+
+  <h2>Where the data goes</h2>
+  <ul>
+    <li>Onto one computer in the household's home, and nowhere else.</li>
+    <li>Not to us, because there is no us — no servers, no accounts, no operator.</li>
+    <li>Never sold, never shared, never used for advertising, never used to train a model.</li>
+  </ul>
+  <p class="note">
+    The <a href="privacy.html">privacy policy</a> sets this out in full, including
+    how to withdraw access and what happens to the data when you do.
+  </p>
+
+  <h2>Who it is for</h2>
+  <p>
+    One family. It is published here because connecting to a health provider's or
+    an insurer's API requires an application to have a public home page, privacy
+    policy and terms of service that a member can read before authorizing
+    anything. That is the only reason this page exists.
+  </p>
+
+  <nav>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="terms.html">Terms of service</a>
+  </nav>
+  <footer>Household Ledger &middot; a personal, non-commercial application.</footer>
+</main>
+</body>
+</html>
